@@ -1,0 +1,116 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+  
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 8%);
+    overflow: hidden; /* Prevents page movement */
+}
+
+.profile-card {
+    background-color: hsl(0, 0%, 12%);
+    color: white;
+    text-align: center;
+    padding: 40px;
+    border-radius: 15px;
+    width: 400px; /* Increased size */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    position: relative; /* Prevent movement */
+}
+
+/* Avatar Image */
+.avatar {
+    width: 120px; /* Increased size */
+    height: 120px; /* Increased size */
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Name & Location */
+.name {
+    font-size: 26px; /* Larger text */
+    font-weight: 700;
+}
+
+.location {
+    color: hsl(75, 94%, 57%);
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+.bio {
+    font-size: 16px;
+    margin: 20px 0;
+    opacity: 0.8;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn {
+    background-color: hsl(0, 0%, 20%);
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: hsl(75, 94%, 57%);
+    color: hsl(0, 0%, 8%);
+}
+
+/* Desktop View (1440px) */
+@media (min-width: 1024px) {
+    .profile-card {
+        width: 450px; /* Larger card for bigger screens */
+        padding: 50px;
+    }
+
+    .avatar {
+        width: 140px;
+        height: 140px;
+    }
+
+    .name {
+        font-size: 30px;
+    }
+
+    .location {
+        font-size: 18px;
+    }
+
+    .bio {
+        font-size: 18px;
+    }
+
+    .btn {
+        padding: 14px;
+        font-size: 18px;
+    }
+}
+
+/* Mobile View (375px) */
+@media (max-width: 375px) {
+    .profile-card {
+      width: 100%;
+      max-width: 320px;
+    }
+}
